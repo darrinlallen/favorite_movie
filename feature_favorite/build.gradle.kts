@@ -32,4 +32,5 @@ dependencies {
     implementation(project(":app"))
     kapt(libs.androidx.room.compiler)
     implementation(libs.bundles.feature.favorite)
+
 }

@@ -9,6 +9,8 @@ import coil.transform.RoundedCornersTransformation
 import com.bumptech.glide.Glide
 import com.example.feature_search.databinding.ItemMediaBinding
 import com.example.findmymovie.R
+import com.example.omdb.OmdbRepo
+import com.example.omdb.local.dao.MediaItemDao
 import com.example.omdb.response.MediaItem
 
 class MediaItemViewHolder(
@@ -17,6 +19,8 @@ class MediaItemViewHolder(
 
     fun bindMediaItem(mediaItem: MediaItem) {
         binding.tvTitle.text = mediaItem.title
+        binding.favButton.setOnClickListener(){
+        }
         binding.ivPoster.load(mediaItem.poster) {
             scale(Scale.FIT)
             crossfade(true)
@@ -27,9 +31,11 @@ class MediaItemViewHolder(
         }
     }
 
+
     companion object {
         fun newInstance(parent: ViewGroup) = ItemMediaBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         ).let { binding -> MediaItemViewHolder(binding) }
     }
+
 }

@@ -16,6 +16,6 @@ interface MediaItemDao {
     @Insert
     suspend fun insertAll(vararg users: MediaItem)
 
-    @Delete
-    suspend fun delete(user: MediaItem)
+    @Query("DELETE FROM media_item")
+    suspend fun deleteAll()
 }

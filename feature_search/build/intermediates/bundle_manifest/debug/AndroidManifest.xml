@@ -25,4 +25,6 @@
         android:extractNativeLibs="false"
         android:testOnly="true" />
 
+    <uses-split android:name="feature_favorite" />
+
 </manifest>

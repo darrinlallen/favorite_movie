@@ -30,5 +30,8 @@ dependencies {
     implementation(project(":app"))
     implementation(libs.bundles.feature.search)
     implementation ("com.github.bumptech.glide:glide:4.13.0")
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.4.0")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.4.0")
+    implementation(project(mapOf("path" to ":feature_favorite")))
     annotationProcessor ("com.github.bumptech.glide:compiler:4.13.0")
 }

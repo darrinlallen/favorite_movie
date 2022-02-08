@@ -7,7 +7,12 @@
     <include-dynamic
         android:id="@+id/searchGraph"
         app:graphResName="nav_search_graph"
-        app:moduleName="feature_search" />
+        app:moduleName="feature_search" >
+        <action
+            android:id="@+id/action_searchGraph_to_favoriteGraph"
+            app:destination="@id/favoriteGraph" />
+        <argument android:name="Values" />
+    </include-dynamic>
 
     <include-dynamic
         android:id="@+id/favoriteGraph"

@@ -2,10 +2,10 @@ package com.example.omdb.local.dao;
 
 import android.database.Cursor;
 import androidx.room.CoroutinesRoom;
-import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
@@ -30,7 +30,7 @@ public final class MediaItemDao_Impl implements MediaItemDao {
 
   private final EntityInsertionAdapter<MediaItem> __insertionAdapterOfMediaItem;
 
-  private final EntityDeletionOrUpdateAdapter<MediaItem> __deletionAdapterOfMediaItem;
+  private final SharedSQLiteStatement __preparedStmtOfDeleteAll;
 
   public MediaItemDao_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -69,19 +69,11 @@ public final class MediaItemDao_Impl implements MediaItemDao {
         }
       }
     };
-    this.__deletionAdapterOfMediaItem = new EntityDeletionOrUpdateAdapter<MediaItem>(__db) {
+    this.__preparedStmtOfDeleteAll = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `media_item` WHERE `imdb_id` = ?";
-      }
-
-      @Override
-      public void bind(SupportSQLiteStatement stmt, MediaItem value) {
-        if (value.getImdbID() == null) {
-          stmt.bindNull(1);
-        } else {
-          stmt.bindString(1, value.getImdbID());
-        }
+        final String _query = "DELETE FROM media_item";
+        return _query;
       }
     };
   }
@@ -104,17 +96,19 @@ public final class MediaItemDao_Impl implements MediaItemDao {
   }
 
   @Override
-  public Object delete(final MediaItem user, final Continuation<? super Unit> continuation) {
+  public Object deleteAll(final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteAll.acquire();
         __db.beginTransaction();
         try {
-          __deletionAdapterOfMediaItem.handle(user);
+          _stmt.executeUpdateDelete();
           __db.setTransactionSuccessful();
           return Unit.INSTANCE;
         } finally {
           __db.endTransaction();
+          __preparedStmtOfDeleteAll.release(_stmt);
         }
       }
     }, continuation);
