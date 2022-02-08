@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/rave44/Downloads/FindMyMovie_new/feature_search/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_search.xml",
+        "source": "/Users/rave44/Downloads/FindMyMovie_new/feature_search/src/main/res/layout/fragment_search.xml"
+    },
+    {
+        "merged": "/Users/rave44/Downloads/FindMyMovie_new/feature_search/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_media.xml",
+        "source": "/Users/rave44/Downloads/FindMyMovie_new/feature_search/src/main/res/layout/item_media.xml"
+    }
+]
