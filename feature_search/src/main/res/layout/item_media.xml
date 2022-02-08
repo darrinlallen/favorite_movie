@@ -24,5 +24,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_poster"
         tools:text="Title" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Favorite"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,23 @@
                     }
                 },
                 {
+                    "source": "/Users/rave44/.gradle/caches/transforms-3/8c6cca8bba2c20080bce822ce7ca86e6/transformed/glide-4.13.0/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "57",
+                        "endOffsets": "158"
+                    }
+                },
+                {
                     "source": "/Users/rave44/Downloads/FindMyMovie_new/feature_search/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "3,4,2",
@@ -23,11 +40,11 @@
                         "endOffsets": "187,268,108"
                     },
                     "to": {
-                        "startLines": "3,4,5",
+                        "startLines": "4,5,6",
                         "startColumns": "4,4,4",
-                        "startOffsets": "105,183,263",
+                        "startOffsets": "163,241,321",
                         "endColumns": "77,79,55",
-                        "endOffsets": "178,258,314"
+                        "endOffsets": "236,316,372"
                     }
                 }
             ]

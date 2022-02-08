@@ -1,6 +1,10 @@
 :feature_search::debug
 androidx.exifinterface:exifinterface
 androidx.lifecycle:lifecycle-common-java8
+com.github.bumptech.glide:annotations
+com.github.bumptech.glide:disklrucache
+com.github.bumptech.glide:gifdecoder
+com.github.bumptech.glide:glide
 io.coil-kt:coil
 io.coil-kt:coil-base
 org.jetbrains.kotlin:kotlin-android-extensions-runtime

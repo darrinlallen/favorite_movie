@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.size.Scale
 import coil.transform.RoundedCornersTransformation
+import com.bumptech.glide.Glide
 import com.example.feature_search.databinding.ItemMediaBinding
 import com.example.findmymovie.R
 import com.example.omdb.response.MediaItem

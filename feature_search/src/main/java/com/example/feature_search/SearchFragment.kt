@@ -20,6 +20,7 @@ class SearchFragment : Fragment() {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
 
+
     private val viewModel by viewModels<SearchViewModel>()
 
     private val mediaItemsAdapter by lazy { MediaItemsAdapter() }

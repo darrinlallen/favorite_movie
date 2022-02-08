@@ -18,6 +18,9 @@
         <dist:fusing dist:include="false" />
     </dist:module>
 
-    <application android:extractNativeLibs="false" />
+    <application
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:testOnly="true" />
 
 </manifest>

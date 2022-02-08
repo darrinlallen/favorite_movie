@@ -29,6 +29,10 @@
 20-->/Users/rave44/Downloads/FindMyMovie_new/feature_search/src/main/AndroidManifest.xml:11:22-42
 21    </dist:module>
 22
-23    <application android:extractNativeLibs="false" />
-24
-25</manifest>
+23    <application
+23-->[com.github.bumptech.glide:glide:4.13.0] /Users/rave44/.gradle/caches/transforms-3/8c6cca8bba2c20080bce822ce7ca86e6/transformed/glide-4.13.0/AndroidManifest.xml:10:5-20
+24        android:debuggable="true"
+25        android:extractNativeLibs="false"
+26        android:testOnly="true" />
+27
+28</manifest>
