@@ -1,6 +1,13 @@
 R_DEF: Internal format may change without notice
 local
+id cv_query
 id favoriteFragment
+id gl_end
+id gl_start
+id imageunit
+id rv_results
+id textunit
 layout fragment_favorite
+layout item
 navigation nav_favorite_graph
 string title_feature_favorite
