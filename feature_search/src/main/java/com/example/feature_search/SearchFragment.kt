@@ -14,8 +14,6 @@ import com.example.feature_search.databinding.FragmentSearchBinding
 import com.example.feature_search.util.ViewState
 import com.example.feature_search.util.hideKeyboard
 import com.example.feature_search.viewmodel.SearchViewModel
-import com.example.omdb.OmdbRepo
-import com.example.omdb.local.dao.MediaItemDao
 import com.example.omdb.response.MediaItem
 
 class SearchFragment : Fragment(), MediaItemsAdapter.ClickListener {

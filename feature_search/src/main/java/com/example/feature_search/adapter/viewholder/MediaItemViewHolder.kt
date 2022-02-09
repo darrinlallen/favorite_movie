@@ -2,19 +2,13 @@ package com.example.feature_search.adapter.viewholder
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.size.Scale
 import coil.transform.RoundedCornersTransformation
-import com.bumptech.glide.Glide
-import com.example.feature_favorite.databinding.FragmentFavoriteBinding
-import com.example.feature_favorite.databinding.ItemBinding
 import com.example.feature_search.adapter.MediaItemsAdapter
 import com.example.feature_search.databinding.ItemMediaBinding
 import com.example.findmymovie.R
-import com.example.omdb.OmdbRepo
-import com.example.omdb.local.dao.MediaItemDao
 import com.example.omdb.response.MediaItem
 
 class MediaItemViewHolder(

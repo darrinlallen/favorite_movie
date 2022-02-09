@@ -4,7 +4,6 @@ package com.example.feature_favorite.favoriteadapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.feature_favorite.databinding.FragmentFavoriteBinding
 import com.example.feature_favorite.databinding.ItemBinding
 import com.example.omdb.response.MediaItem
 
@@ -43,5 +42,8 @@ class fav_Adapter (
             ).let { MovieViewHolder(it) }
 //
         }
+    }
+    interface ClickListener {
+        fun itemClicked(item: MediaItem)
     }
 }
