@@ -23,7 +23,6 @@ class SearchFragment : Fragment(), MediaItemsAdapter.ClickListener {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
 
-
     private val viewModel by viewModels<SearchViewModel>()
 
     private val mediaItemsAdapter by lazy { MediaItemsAdapter(this) }
@@ -90,7 +89,7 @@ class SearchFragment : Fragment(), MediaItemsAdapter.ClickListener {
     }
 
     override fun itemClicked(item: MediaItem) {
-       OmdbRepo
+
     }
 
     // onClick(item: MediaItem) -> viewModel -> repo -> database

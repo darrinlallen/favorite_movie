@@ -2,6 +2,7 @@ package com.example.feature_search.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.*
+import com.example.feature_search.adapter.MediaItemsAdapter
 import com.example.feature_search.databinding.FragmentSearchBinding
 import com.example.feature_search.databinding.ItemMediaBinding
 import com.example.feature_search.util.ViewState

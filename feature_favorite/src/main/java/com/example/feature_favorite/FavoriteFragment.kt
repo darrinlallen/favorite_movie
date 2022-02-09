@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.feature_favorite.databinding.FragmentFavoriteBinding
-import com.example.movie_database.adapter.fav_Adapter
 import com.example.omdb.response.MediaItem
 
 class FavoriteFragment : Fragment() {
