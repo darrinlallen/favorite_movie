@@ -18,4 +18,5 @@ interface MediaItemDao {
 
     @Query("DELETE FROM media_item")
     suspend fun deleteAll()
+
 }

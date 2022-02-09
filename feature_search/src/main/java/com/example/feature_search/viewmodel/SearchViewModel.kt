@@ -2,6 +2,8 @@ package com.example.feature_search.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.*
+import com.example.feature_search.databinding.FragmentSearchBinding
+import com.example.feature_search.databinding.ItemMediaBinding
 import com.example.feature_search.util.ViewState
 import com.example.omdb.OmdbRepo
 import com.example.omdb.response.MediaItem
@@ -16,11 +18,13 @@ class SearchViewModel(app: Application) : AndroidViewModel(app) {
     private val _viewState = MutableLiveData<ViewState>(ViewState.NoQuery)
     val viewState: LiveData<ViewState> get() = _viewState
 
+
     init {
         viewModelScope.launch {
             omdbRepo.mediaItems.firstOrNull()?.let { mediaItems ->
                 _viewState.value = ViewState.Success(mediaItems)
             }
+
         }
     }
 

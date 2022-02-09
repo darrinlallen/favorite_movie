@@ -7,6 +7,8 @@ import coil.load
 import coil.size.Scale
 import coil.transform.RoundedCornersTransformation
 import com.bumptech.glide.Glide
+import com.example.feature_favorite.databinding.FragmentFavoriteBinding
+import com.example.feature_favorite.databinding.ItemBinding
 import com.example.feature_search.databinding.ItemMediaBinding
 import com.example.findmymovie.R
 import com.example.omdb.OmdbRepo
@@ -28,7 +30,12 @@ class MediaItemViewHolder(
             placeholder(R.drawable.no_image)
             transformations(RoundedCornersTransformation(25f))
             build()
+
         }
+
+        initListner()
+
+
     }
 
 
@@ -37,5 +44,12 @@ class MediaItemViewHolder(
             LayoutInflater.from(parent.context), parent, false
         ).let { binding -> MediaItemViewHolder(binding) }
     }
+
+        fun initListner(){
+            binding.favButton.setOnClickListener() {
+                binding.tvTitle.text = "added to favorites"
+            }
+        }
+
 
 }
