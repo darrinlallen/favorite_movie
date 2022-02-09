@@ -1,19 +1,17 @@
 package com.example.feature_favorite.favoriteviewmodel
 
 import android.app.Application
-import androidx.constraintlayout.motion.utils.ViewState
-import androidx.lifecycle.*
-import com.example.feature_search.adapter.MediaItemsAdapter
-import com.example.feature_search.databinding.FragmentSearchBinding
-import com.example.feature_search.databinding.ItemMediaBinding
-import com.example.feature_search.util.ViewState
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.example.omdb.OmdbRepo
 import com.example.omdb.response.MediaItem
 import com.example.omdb.response.SearchResponse
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
 
-class SearchViewModel(app: Application) : AndroidViewModel(app) {
+class favoriteViewModel(app: Application) : AndroidViewModel(app) {
 
     private val omdbRepo by lazy { OmdbRepo(getApplication()) }
 
