@@ -14,8 +14,11 @@ import com.example.feature_search.databinding.FragmentSearchBinding
 import com.example.feature_search.util.ViewState
 import com.example.feature_search.util.hideKeyboard
 import com.example.feature_search.viewmodel.SearchViewModel
+import com.example.omdb.OmdbRepo
+import com.example.omdb.local.dao.MediaItemDao
+import com.example.omdb.response.MediaItem
 
-class SearchFragment : Fragment() {
+class SearchFragment : Fragment(), MediaItemsAdapter.ClickListener {
 
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
@@ -23,7 +26,7 @@ class SearchFragment : Fragment() {
 
     private val viewModel by viewModels<SearchViewModel>()
 
-    private val mediaItemsAdapter by lazy { MediaItemsAdapter() }
+    private val mediaItemsAdapter by lazy { MediaItemsAdapter(this) }
 
     /**
      * Listener for SearchView
@@ -86,4 +89,12 @@ class SearchFragment : Fragment() {
         Log.d("SearchFragment", "handleError: $errorMsg")
     }
 
+    override fun itemClicked(item: MediaItem) {
+       OmdbRepo
+    }
+
+    // onClick(item: MediaItem) -> viewModel -> repo -> database
+
 }
+
+    // on deleteAll -> re-query all of the mediaItems ->

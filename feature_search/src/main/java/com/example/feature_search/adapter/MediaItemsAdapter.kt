@@ -7,13 +7,13 @@ import com.example.feature_search.adapter.viewholder.MediaItemViewHolder
 import com.example.feature_search.databinding.ItemMediaBinding
 import com.example.omdb.response.MediaItem
 
-class MediaItemsAdapter : ListAdapter<MediaItem, MediaItemViewHolder>(diffUtilItemCallback) {
+class MediaItemsAdapter(private val listener: ClickListener) : ListAdapter<MediaItem, MediaItemViewHolder>(diffUtilItemCallback) {
     private var _binding: ItemMediaBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateViewHolder(
         parent: ViewGroup, viewType: Int
-    ) = MediaItemViewHolder.newInstance(parent)
+    ) = MediaItemViewHolder.newInstance(parent, listener)
 
     override fun onBindViewHolder(holder: MediaItemViewHolder, position: Int) {
         holder.bindMediaItem(getItem(position))
@@ -30,6 +30,10 @@ class MediaItemsAdapter : ListAdapter<MediaItem, MediaItemViewHolder>(diffUtilIt
                 oldItem: MediaItem, newItem: MediaItem
             ) = oldItem == newItem
         }
+    }
+
+    interface ClickListener {
+        fun itemClicked(item: MediaItem)
     }
 
 }

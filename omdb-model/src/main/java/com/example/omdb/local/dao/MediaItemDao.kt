@@ -19,4 +19,6 @@ interface MediaItemDao {
     @Query("DELETE FROM media_item")
     suspend fun deleteAll()
 
+    @Insert
+    suspend fun insertFavorite(item: MediaItem)
 }
