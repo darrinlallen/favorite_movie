@@ -1,8 +1,8 @@
 com.example.findmymovie:layout/item = 0x7d020001
 com.example.findmymovie:layout/fragment_favorite = 0x7d020000
 com.example.findmymovie:id/textunit = 0x7d010006
-com.example.findmymovie:id/rv_results = 0x7d010005
 com.example.findmymovie:navigation/nav_favorite_graph = 0x7d030000
+com.example.findmymovie:id/rv_results = 0x7d010005
 com.example.findmymovie:id/imageunit = 0x7d010004
 com.example.findmymovie:id/gl_start = 0x7d010003
 com.example.findmymovie:id/cv_query = 0x7d010000
